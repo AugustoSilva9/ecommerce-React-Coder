@@ -5,6 +5,7 @@ const productos = [
         precio: 1200,
         img: 'https://essential.vteximg.com.br/arquivos/ids/558789-454-423/962-3334_1.jpg?v=637883197890030000',
         stock: 5,
+        descripcion: "Descripcion del producto ",
     },
     {
         id: '2',
@@ -12,6 +13,7 @@ const productos = [
         precio: 1500,
         img: 'https://essential.vteximg.com.br/arquivos/ids/529727-454-423/934-0279_1.jpg?v=637822540818230000',
         stock: 3,
+        descripcion: "Descripcion del producto ",
     },
     {
         id: '3',
@@ -19,6 +21,7 @@ const productos = [
         precio: 2500,
         img: 'https://essential.vteximg.com.br/arquivos/ids/432383-454-423/266-1118_1.jpg?v=637577372327900000',
         stock: 2,
+        descripcion: "Descripcion del producto ",
     }
 ]
 
@@ -26,6 +29,14 @@ export const getProductos = () => {
     return new Promise((resolve) =>{
         setTimeout(() => {
             resolve(productos)
+        }, 2000)
+    })
+}
+
+export const getProductById = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(productos[1])
         }, 2000)
     })
 }

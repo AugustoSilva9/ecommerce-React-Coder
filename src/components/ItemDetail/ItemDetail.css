@@ -1,0 +1,14 @@
+.containerDetail{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+}
+.w-50{
+    width: 50%;
+}
+.img-detail{
+    width: 50%;
+    height: 50%;
+}
