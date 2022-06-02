@@ -19,7 +19,7 @@ y ejecutar:
 
 ## Demostración del sitio
 
-![demostracion del titulo](/public/images/navegacion.gif)
+![demostracion del titulo](/public/images/navegacionSitio.gif)
 
 ## Rutas
 
@@ -33,6 +33,6 @@ La ruta inicial '/' se puede ver todos los productos del sitio. Cada producto ti
 
 La ruta '/detail/:productoId' nos permite ir al detalle del producto seleccionado en el ItemListContainer. Donde podemos encontrar la imagen, nombre, descripcion y precio del producto.
 
--**ItemDetailContainer:** Componente donde se visualiza el componente ItemDetail al cual le pasamos los datos en las props.
+- **ItemDetailContainer:** Componente donde se visualiza el componente ItemDetail al cual le pasamos los datos en las props.
 
--**ItemDetail:** Componente que muestra el detalle del producto.
+- **ItemDetail:** Componente que muestra el detalle del producto.

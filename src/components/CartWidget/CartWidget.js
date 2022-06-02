@@ -1,8 +1,8 @@
 const CartWidget = () =>{
     return(
-        <div>
+        <div style={{display: "flex"}}>
             <img className="cart" src="./images/cart.png" alt="Carrito de compras"/>
-            <p>4</p>
+            <p  style={{marginLeft: "1rem", fontSize: "1.2rem"}}>4</p>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import Item from "../Item/Item";
 
  
 const ItemList = ({prod}) =>{
-    console.log(prod)
+
     return(
         <div style={{display: "flex",
          justifyContent: "space-around",

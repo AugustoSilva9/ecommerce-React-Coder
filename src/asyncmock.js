@@ -40,7 +40,7 @@ export const getProductById = (id) => {
     return new Promise((resolve) =>{
         setTimeout(() => {
             resolve(productos.find(prod => prod.id === id))
-        }, 2000)
+        }, 500)
     })
 }
 
