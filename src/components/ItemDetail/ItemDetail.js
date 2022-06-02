@@ -1,6 +1,6 @@
 import "./ItemDetail.css" 
 
-const ItemDetail = ({ id, nombre, precio, img, descripcion }) => {
+const ItemDetail = ({ nombre, precio, img, descripcion }) => {
 
     return(
         <div className="containerDetail">

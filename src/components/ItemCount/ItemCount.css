@@ -9,13 +9,14 @@ h2{
 .btnAddCart{
     height: 2rem;
     color: red;
-    border: solid 2px red;
+    border: solid 1px red;
     background-color: white;
+    margin-bottom: 1rem;
 }
 .botonera button{
     height: 2rem;
     width: 2rem;
     color: red;
-    border: solid 2px red;
+    border: solid 1px red;
     background-color: white;
 }

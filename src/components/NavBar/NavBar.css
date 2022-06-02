@@ -6,7 +6,11 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     background-color: black;
+    color: white !important;
+}
+a h1{
     color: white;
+    align-items: center;
 }
 ul{
     display: flex;
@@ -14,13 +18,14 @@ ul{
     justify-content: center;
     align-items: center;
 }
-ul li{
+ul a li{
     list-style: none;
     height: 100%;
     padding:  1rem;
     font-size: 1rem;
+    color: white !important;
 }
-ul li:hover{
+ul a li:hover{
     background-color: rgb(189, 6, 6);
 }
 button{
@@ -30,4 +35,7 @@ button{
 .cart{
     height: 4rem;
     width: 4rem;
+}
+.activo{
+background-color: rgb(189, 6, 6); ;
 }
