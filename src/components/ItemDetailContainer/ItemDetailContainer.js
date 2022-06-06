@@ -12,6 +12,7 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         getProductById( productoId ).then(response => {
             setItem(response)
+            console.log(item)
         }).finally(() => {
             setLoading(false)
         })

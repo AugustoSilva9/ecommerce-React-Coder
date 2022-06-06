@@ -1,17 +1,18 @@
 import { useState } from "react";
 import "./ItemCount.css";
+import { Link } from "react-router-dom";
 
-const ItemCount = (props) =>{
+const ItemCount = ({initial, stock, onAdd}) =>{
 
     const [count, setCount] = useState(0);
     
     function decrement(){
-        if(count > props.initial){
+        if(count > initial){
             setCount(count -1)
         }
     }
     const increment = () => {
-        if(count < props.stock){
+        if(count < stock){
             setCount(count + 1)
         }
     }
@@ -23,7 +24,7 @@ const ItemCount = (props) =>{
                 <h2>{count}</h2>
                 <button onClick={increment}>+</button>
             </div>
-            <button className="btnAddCart">Agregar al carrito </button>
+            <button className="btnAddCart" onClick={() => onAdd(count)} >Agregar al carrito </button>
         </div>
     )
 }
