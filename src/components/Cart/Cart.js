@@ -1,23 +1,17 @@
 import { useContext  } from "react"
 import CartContext from "../../Context/CartContext"
+import CartContainer from "../CartContainer/CartContainer"
 
 const Cart = (props) =>{
 
-    const { cart, getQuantity } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
     console.log(cart)
 
     return(
-        <div>
+        <div style={{width: "90%", margin: "auto"}}>
             <h1>{props.title}</h1>
             <div>
-                {cart.map(prod => {
-                    return(
-                        <div key={prod.id} style={{display: "flex", justifyContent: "center"}}>
-                             <div >{prod.nombre}</div>
-                             <div >{prod.quantity}</div>
-                        </div>
-                    )
-                })}
+                {cart.map(prod => <CartContainer key={prod.id} {...prod}/> )}
             </div>
         </div>
     )

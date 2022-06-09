@@ -1,0 +1,15 @@
+.cartContainer {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 100%;
+;
+}
+
+.cartContainer p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 20%;
+}
+.cartContainer button{
+    margin-left: auto;
+}
