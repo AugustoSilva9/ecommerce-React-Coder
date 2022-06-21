@@ -1,4 +1,4 @@
-const productos = [
+/* const productos = [
     {
         id: '1',
         nombre: 'Remera',
@@ -50,4 +50,4 @@ export const getProductosByCategoria = (cat) => {
             resolve(productos.filter(prod => prod.categoria === cat))
         }, 2000)
     })
-}
+} */
