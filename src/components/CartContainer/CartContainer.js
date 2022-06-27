@@ -6,7 +6,7 @@ import "./CartContainer.css"
 
 const CartContainer = ({id, nombre, quantity, precio}) => {
     const { removeItem } = useContext(CartContext)
-    console.log(removeItem)
+   /*  console.log(removeItem) */
     let totalProd = quantity * precio ; 
 
     return(

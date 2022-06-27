@@ -1,0 +1,20 @@
+
+.formBuyer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   /*  width: 50%; */
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.formBuyer input{
+    margin: 0.5rem auto;
+    width: 50%;
+    height: 2.5rem;
+}
+
+.btnBuyer{
+    width: 20% !important;
+    height: 2.5rem !important;
+}
