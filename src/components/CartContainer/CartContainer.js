@@ -1,6 +1,8 @@
 import { useContext  } from "react"
 import CartContext from "../../Context/CartContext"
 import "./CartContainer.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 
@@ -15,7 +17,7 @@ const CartContainer = ({id, nombre, quantity, precio}) => {
             <p>{quantity }Un</p>
             <p>${precio}</p>
             <p>${totalProd}</p>
-            <button onClick={() => removeItem(id)}>Eliminar </button>
+            <FontAwesomeIcon className="eliminar" icon={faTrash} onClick={() => removeItem(id)}/>
         </div>
     )
 }

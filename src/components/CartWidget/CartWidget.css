@@ -1,0 +1,11 @@
+
+.carrito{
+    color: white;
+    margin: auto 0.2rem;
+    height: 1.7rem;
+}
+.nroCarrito{
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
+    color: white ;
+}

@@ -7,7 +7,7 @@ const ItemCount = ({initial, stock, onAdd}) =>{
     const [quantity, setQuantity] = useState(initial)
     
     function decrement(){
-        if(quantity > initial){
+        if(quantity > 1){
             setQuantity(quantity -1)
         }
     }

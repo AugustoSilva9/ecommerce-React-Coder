@@ -9,7 +9,6 @@ const Item = ({id, nombre, precio, img, stock }) => {
             <img src={img} alt="imagen" />
             <h2>{nombre}</h2>
             <h4>$ {precio}</h4>
-           {/* { <ItemCount stock={stock} initial={0} />} */}
            <Link to={`/detail/${id}`}>
                <button className="btnAddCart">Ver Detalle</button>
            </Link>

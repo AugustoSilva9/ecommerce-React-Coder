@@ -7,6 +7,7 @@ import { addDoc, collection } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 import Form from '../Form/Form'
 
+
 const Cart = (props) =>{
 
     const { cart, clearCart } = useContext(CartContext)
@@ -19,17 +20,19 @@ const Cart = (props) =>{
         tel: ''
     });
     const [formulario, setFormulario] = useState(false)
+    const [errorDato, setErrorDato] = useState('');
     
     const validarDatos = ({ name, direccion, tel, email}) => {
        if( email.indexOf("@") === -1){
-        console.log('@')
+        setErrorDato('El email es incorrecto')
          return false
        }
        if( email.indexOf(".") === -1){
-        console.log('...')
+        setErrorDato('El email es incorrecto')
         return false
       }
        if(name.length === 0 || direccion.length === 0 || tel.length === 0){
+        setErrorDato('Datos incorrectos')
         return false
        }else{
         return true
@@ -58,7 +61,7 @@ const Cart = (props) =>{
     const finalizarCompra = ()=> {
         const validar = validarDatos(buyer);
         if(!validar){
-            return console.log('error')
+            return errorDato
         }
         createOrder()
         setFormulario(false)
@@ -81,11 +84,13 @@ const Cart = (props) =>{
             <h1>{props.title}</h1>
            { cart.length 
                 ? <div>
-                    <button onClick={clearCart}>borrar</button>
                     {cart.map(prod => <CartContainer key={prod.id} {...prod}/> )}
                     <p className="total">Total ${total(cart)}</p>
-                    {!formulario && <button onClick={() => {setFormulario(true)}}>Finalizar compra</button>}
-                    {formulario && <Form buyer={buyer} setBuyer={setBuyer} finalizarCompra={finalizarCompra} /> }
+                    <div className='contenedorBtn'>
+                        <button className='btnCart' onClick={clearCart}>Limpiar Carrito</button>
+                        {!formulario && <button className='btnCart' onClick={() => {setFormulario(true)}}>Finalizar compra</button>}
+                    </div>
+                    {formulario && <Form buyer={buyer} setBuyer={setBuyer} errorDato={errorDato} finalizarCompra={finalizarCompra} /> }
                    {/*  <button onClick={createOrder}>Finalizar compra</button> */}
                   </div>
                 : <div>

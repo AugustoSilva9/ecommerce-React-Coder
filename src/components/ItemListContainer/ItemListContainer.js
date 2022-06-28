@@ -50,10 +50,10 @@ const ItemListContainer = (props) => {
     if(loading){
         return(<div class="spinner"></div>)
     }
-
+   
     return (
         <div>
-            <h1>{props.greeting}</h1>
+            <h1>{categoriaId ? categoriaId : "Nuestros Productos"}</h1>
             <ItemList prod={productos} />
         </div>
     )

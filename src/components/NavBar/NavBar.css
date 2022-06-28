@@ -39,3 +39,14 @@ button{
 .activo{
 background-color: rgb(189, 6, 6); ;
 }
+.btn{
+    background-color:  rgb(189, 6, 6);
+    border: none;
+    color: white;
+}
+.login{
+    margin-right: 1rem;
+    width: 7%;
+    border-radius: 20%;
+    font-weight: bold;
+}
