@@ -32,9 +32,9 @@ const NavBar = () => {
         <nav>
             <Link to='/'>
                 <h1>E-commerce</h1>
-            </Link>
+            </Link> 
             <ul>
-                {categoria.map(cat => <NavLink to={`/categoria/${cat.id}`} className={({isActive}) => isActive ? 'activo' : ''} ><li>{`${cat.id}`}</li> </NavLink>)}
+                {categoria.map(cat => <NavLink to={`/categoria/${cat.descripcion}`} className={({isActive}) => isActive ? 'activo' : ''} ><li>{`${cat.descripcion}`}</li> </NavLink>)}
                 {/* <NavLink to='/categoria/Remeras' className={({isActive}) => isActive ? 'activo' : ''} ><li>Remeras</li> </NavLink>
                 <NavLink to='/categoria/Gorras' className={({isActive}) => isActive ? 'activo' : ''}><li>Gorras</li> </NavLink>
                 <NavLink to='/categoria/Shorts' className={({isActive}) => isActive ? 'activo' : ''}><li>Shorts</li> </NavLink> */}

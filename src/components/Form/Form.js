@@ -16,7 +16,7 @@ const Form = ({ buyer, setBuyer, finalizarCompra, errorDato }) => {
                 <input  value={buyer.tel} onChange={(e) => setBuyer({ ...buyer, tel: e.target.value })} type="tel" placeholder="2356987" required />
                 <p className="errorDato">{`${errorDato}`}</p>
                 <input type="button" value="Comprar" className="btnBuyer" onClick={finalizarCompra} />
-
+ 
             </form>
         </div>
     )
