@@ -8,7 +8,7 @@ import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 const CartContainer = ({id, nombre, quantity, precio}) => {
     const { removeItem } = useContext(CartContext)
-   /*  console.log(removeItem) */
+
     let totalProd = quantity * precio ; 
 
     return(

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
  
-
 export const useFirestore = (asyncFn, dependencias = []) => {
     const [data, setData] = useState()
     const [error, setError] = useState()

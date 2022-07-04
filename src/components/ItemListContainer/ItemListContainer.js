@@ -1,5 +1,4 @@
 import ItemList from "../ItemList/ItemList"
-/* import { useState ,  useEffect } from "react" */
 import { useParams } from "react-router-dom"
 import "../Item/Item.css"
 import { getProductos } from "../../services/firebase/firestore"
@@ -9,23 +8,7 @@ const ItemListContainer = () => {
     
     const { categoriaId } = useParams();
     const { loading, data, error } = useFirestore(() => getProductos(categoriaId), [categoriaId])
-   /*  const [productos, setProductos] = useState([]);
-    const [loading, setLoading] = useState(true);
 
-
-    useEffect(() => {
-        setLoading(true)
-
-        getProductos(categoriaId).then(response => {
-            setProductos(response)
-        }).catch(error => {
-            console.log(error)
-        }).finally(() => {
-            setLoading(false)
-        })
-    },  [categoriaId]) */
-
-   
     if(loading){
         return(<div class="spinner"></div>)
     }
@@ -35,7 +18,7 @@ const ItemListContainer = () => {
     }
    
     return (
-        <div>
+        <div  style={{marginBottom: "2rem", paddingBottom: "2rem"}}>
             <h1>{categoriaId ? categoriaId : "Nuestros Productos"}</h1>
             <ItemList prod={data} />
         </div>

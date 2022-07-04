@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import Cart from './components/Cart/Cart';
+import Footer from './components/Footer/Footer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { CartContextProvider } from './Context/CartContext'
 
@@ -20,6 +21,7 @@ function App() {
             <Route path='/cart' element={ <Cart title="Carrito de compras" /> } />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </CartContextProvider>
     </div>
   );

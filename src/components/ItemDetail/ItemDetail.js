@@ -11,10 +11,11 @@ const ItemDetail = ({ id, nombre, precio, img, descripcion, stock }) => {
     const { addItem, isInCart, cart } = useContext(CartContext)
      
     const handleOnAdd = (quantity) => {
-        console.log(quantity)
+        if(quantity === 0){
+            return console.log('no hay stock')
+        }
         setQuantity(quantity)
         
-        console.log(`${quantity} ---`)
         addItem({ id, nombre, precio, quantity })
     }
     
@@ -23,11 +24,15 @@ const ItemDetail = ({ id, nombre, precio, img, descripcion, stock }) => {
         if(inCart){
             const articulo = cart.find(p =>  p.id === id)
             return articulo.quantity
-        }else{
-            return 1
+        }
+        else{
+            if(stock > 0){
+                return 1
+            }else {
+                return 0
+            }
         }
     }
-    console.log(descripcion)
     return(
         <div className="containerDetail">
             <img src={img} alt={`imagen de ${nombre}`} className="w-50 img-detail" />

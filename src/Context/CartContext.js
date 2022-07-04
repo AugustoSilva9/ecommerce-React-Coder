@@ -1,6 +1,5 @@
 import { useState, createContext } from "react";
 
-
 const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
@@ -44,7 +43,6 @@ export const CartContextProvider = ({ children }) => {
 
     const clearCart = () => {
         setCart([]);
-        console.log('borro todo cart')
     }
 
 

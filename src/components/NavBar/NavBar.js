@@ -26,7 +26,6 @@ const NavBar = () => {
         return(<div class="spinner"></div>)
     }
     const quantity = getQuantity();
-    console.log(categoria)
 
     return(
         <nav>
@@ -35,11 +34,8 @@ const NavBar = () => {
             </Link> 
             <ul>
                 {categoria.map(cat => <NavLink to={`/categoria/${cat.descripcion}`} className={({isActive}) => isActive ? 'activo' : ''} ><li>{`${cat.descripcion}`}</li> </NavLink>)}
-                {/* <NavLink to='/categoria/Remeras' className={({isActive}) => isActive ? 'activo' : ''} ><li>Remeras</li> </NavLink>
-                <NavLink to='/categoria/Gorras' className={({isActive}) => isActive ? 'activo' : ''}><li>Gorras</li> </NavLink>
-                <NavLink to='/categoria/Shorts' className={({isActive}) => isActive ? 'activo' : ''}><li>Shorts</li> </NavLink> */}
             </ul>
-            {quantity > 0 && <CartWidget  />}
+            {quantity > 0 && <CartWidget />}
             <button className='btn login' type="button">Login</button>
         </nav>
     )

@@ -13,7 +13,7 @@ const CartWidget = () =>{
     const quantity = getQuantity()
 
     return(
-        <Link to='/cart' style={{display: "flex"}}>
+        <Link to='/cart' className="centrarCart" style={{display: "flex"}}>
             <FontAwesomeIcon className="carrito" icon={faCartShopping} />
             <p className="nroCarrito" > { quantity } </p>
         </Link>

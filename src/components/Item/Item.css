@@ -9,6 +9,7 @@ a {
 .card{
     border: 1px black solid;
     background-color: #fff;
+    margin-top: 2rem;
 }
 
 .spinner {

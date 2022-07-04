@@ -1,10 +1,10 @@
 import Item from "../Item/Item";
 
- 
 const ItemList = ({prod}) =>{
 
     return(
         <div style={{display: "flex",
+         flexWrap: "wrap",
          justifyContent: "space-around",
          width: "90%",
          margin: "auto"}}>

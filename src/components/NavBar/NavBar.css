@@ -50,3 +50,22 @@ background-color: rgb(189, 6, 6); ;
     border-radius: 20%;
     font-weight: bold;
 }
+
+@media screen and (max-width: 768px) {
+    nav{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+    }
+    ul{
+        flex-direction: column;
+        padding: 0;
+    }
+    .login{
+        margin: auto;
+        width: 20%;
+    }
+    .centrarCart{
+        margin: auto;
+    }
+}

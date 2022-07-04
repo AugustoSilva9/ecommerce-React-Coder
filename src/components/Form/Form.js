@@ -1,10 +1,6 @@
 import "./Form.css"
 
-
-
 const Form = ({ buyer, setBuyer, finalizarCompra, errorDato }) => {
-
-
 
     return(
         <div>
